@@ -1,8 +1,8 @@
 {
-  "name": "gitbook-plugin-page-toc",
-  "description": "Adds table of conents and anchors inside page",
+  "name": "gitbook-plugin-wiki-toc",
+  "description": "Adds a Wikipedia-like Table of Contents (TOC) to every page in your GitBook",
   "main": "index.js",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "engines": {
     "gitbook": "3.*"
   },
@@ -12,15 +12,6 @@
         "type": "string",
         "default": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
         "title": "CSS selector to select the elements to put anchors on"
-      },
-      "position": {
-        "type": "string",
-        "default": "before-first",
-        "title": "Position of TOC",
-        "enum": [
-          "before-first",
-          "top"
-        ]
       }
     }
   },
@@ -30,11 +21,11 @@
     "anchorjs",
     "toc"
   ],
-  "author": "Leo Liang <leo.liang@gmail.com>",
+  "author": "pypmannetjies@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aleung/gitbook-plugin-page-toc.git"
+    "url": "https://github.com/pypmannetjies/gitbook-plugin-wiki-toc.git"
   },
-  "homepage": "https://github.com/aleung/gitbook-plugin-page-toc"
+  "homepage": "https://github.com/pypmannetjies/gitbook-plugin-wiki-toc.git"
 }
