@@ -1,19 +1,10 @@
 {
   "name": "gitbook-plugin-wiki-toc",
-  "description": "Adds a Wikipedia-like Table of Contents (TOC) to every page in your GitBook",
+  "description": "Adds a Wikipedia style Table of Contents (TOC) to every page in your GitBook",
   "main": "index.js",
   "version": "1.0.0",
   "engines": {
     "gitbook": "3.*"
-  },
-  "gitbook": {
-    "properties": {
-      "selector": {
-        "type": "string",
-        "default": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
-        "title": "CSS selector to select the elements to put anchors on"
-      }
-    }
   },
   "keywords": [
     "gitbook",
@@ -21,7 +12,7 @@
     "anchorjs",
     "toc"
   ],
-  "author": "pypmannetjies@gmail.com",
+  "author": "pypmannetjies",
   "license": "MIT",
   "repository": {
     "type": "git",

@@ -4,12 +4,12 @@
 }
 
 .page-toc {
-	float: right;
     background: #f8f8f8;
     border: 1px solid rgba(0, 0, 0, 0.07);
     border-radius: 3px;
     padding: 20px !important;
-	font-size: smaller;
+    font-size: smaller;
+    display: inline-block;
 }
 
 .page-toc ul {

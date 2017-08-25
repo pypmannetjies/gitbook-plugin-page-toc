@@ -1,16 +1,10 @@
 require(['gitbook'], function(gitbook) {
 
-    var selector;
-    var position;
+    const selector = ".markdown-section h2, .markdown-section h3, .markdown-section h4";
 
     anchors.options = {
         placement: 'left'
     }
-
-    gitbook.events.bind('start', function(e, config) {
-        selector = config['page-toc'].selector;
-        position = config['page-toc'].position;
-    });
 
     gitbook.events.bind('page.change', function() {
 
@@ -25,7 +19,7 @@ require(['gitbook'], function(gitbook) {
         };
 
         var anchorLevel = function(nodeName) {
-            return parseInt(nodeName.charAt(1));
+            return parseInt(nodeName.charAt(1) - 1);
         };
 
         var navTreeNode = function(current, moveLevels) {
@@ -63,13 +57,8 @@ require(['gitbook'], function(gitbook) {
                 prevLevel = currentLevel;
             }
 
-            if (position === 'top') {
-                var section = document.body.querySelector('.markdown-section');
-                section.insertBefore(nav, section.firstChild);
-            } else {
-                var first = anchors.elements[0];
-                first.parentNode.insertBefore(nav, first);
-            }
+            var first = anchors.elements[0];
+            first.parentNode.insertBefore(nav, first);
         }
 
     })

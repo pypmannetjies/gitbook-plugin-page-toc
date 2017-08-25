@@ -1,10 +1,30 @@
-# gitbook-plugin-page-toc
+# gitbook-plugin-wiki-toc
 
-Add Table of Contents (TOC) to every page in your GitBook.
+Adds a Wikipedia style Table of Contents (TOC) to every page in your GitBook, with anchors link to headings inside the page as well.
 
-It adds anchors link to headings inside the page as well.
+Wikipedia style means that the TOC is inserted above the first level 2 heading. That is, it will come after the body of your introduction. 
 
-![](https://raw.githubusercontent.com/aleung/gitbook-plugin-page-toc/master/doc/screenshot-1.png)
+Only heading levels 2 - 4 are added, or in markdown:
+
+```
+# Test
+
+Here you give a brief introduction about the topics on this page. The TOC will be inserted after this paragraph.
+
+## Level 2
+### Level 3
+#### Level 4
+##### Level 5 (not included)
+## More Level 2
+## More Level 2
+## Wow!
+```
+
+Will result in a layout like this:
+
+![](screenshot.png)
+
+This is a fork of [page-toc](https://github.com/aleung/gitbook-plugin-page-toc).
 
 ## Install
 
@@ -12,21 +32,13 @@ Add the plugin to your `book.json`:
 
 ``` json
     {
-      "plugins": [ "page-toc" ],
-      "pluginsConfig": {
-      }
+      "plugins": [ "wiki-toc" ],
     }
 ```
 
 ## Configuration
 
-- `selector` : CSS selector to select the elements to put anchors on
-  - Default: `.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4`,
-    which include headings from level 1 to level 4.
-- `position` : Position of TOC
-  - Allowed values:
-    - `before-first` _(default)_ : Before the first heading
-    - `top` : On top of the page
+Unlike page-toc, there are currently no configuration parameters available for wiki-toc.
 
 ## CSS Customization
 
