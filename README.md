@@ -22,7 +22,7 @@ Here you give a brief introduction about the topics on this page. The TOC will b
 
 Will result in a layout like this:
 
-![](screenshot.png)
+![](https://raw.githubusercontent.com/pypmannetjies/gitbook-plugin-wiki-toc/master/doc/screenshot.png)
 
 This is a fork of [page-toc](https://github.com/aleung/gitbook-plugin-page-toc).
 
